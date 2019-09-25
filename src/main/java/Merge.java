@@ -42,8 +42,8 @@ public class Merge {
             System.out.println("---------------------------");
 
 
-            InsertionSort.sortLow(array1);
-            InsertionSort.sortLow(array2);
+            InsertionSort.sort(array1);
+            InsertionSort.sort(array2);
 
             for (Object k : array1)
                 System.out.print(k + " ");
@@ -59,8 +59,6 @@ public class Merge {
                 System.out.print(k + " ");
             System.out.println();
             System.out.println("---------------------------");
-
-            InsertionSort.sortHigh(mergedArray);
 
             for (Object k : mergedArray)
                 System.out.print(k + " ");
@@ -79,4 +77,5 @@ public class Merge {
 
         return merged;
     }
+
 }
