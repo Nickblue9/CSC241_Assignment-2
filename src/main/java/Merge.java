@@ -42,20 +42,41 @@ public class Merge {
             System.out.println("---------------------------");
 
 
-            InsertionSort.sort(array1);
-            InsertionSort.sort(array2);
+            InsertionSort.sortLow(array1);
+            InsertionSort.sortLow(array2);
 
             for (Object k : array1)
                 System.out.print(k + " ");
             System.out.println();
             for (Object k : array2)
                 System.out.print(k + " ");
+            System.out.println();
+            System.out.println("---------------------------");
 
+            int [] mergedArray = merge(array1,array2);
+
+            for (Object k : mergedArray)
+                System.out.print(k + " ");
+            System.out.println();
+            System.out.println("---------------------------");
+
+            InsertionSort.sortHigh(mergedArray);
+
+            for (Object k : mergedArray)
+                System.out.print(k + " ");
             System.out.println();
             System.out.println("---------------------------");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static int[] merge(int[] arr1, int [] arr2) {
+        int[] merged = new int[arr1.length + arr2.length];
+
+
+
+        return merged;
     }
 }
