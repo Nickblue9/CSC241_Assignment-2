@@ -119,19 +119,21 @@ public class Merge {
         }
         System.out.println();
 
+        String n="";
         for(int k: B) {
-            System.out.print(k);
-            if(k!= B[B.length-1])
-                System.out.print(" ");
+            n=n+k;
+            if(k != B[B.length-1])
+                n=n+" ";
         }
-        System.out.println();
+        System.out.println(n);
 
+        n="";
         for(int k: C) {
-            System.out.print(k);
+            n=n+k;
             if(k!= C[C.length-1])
-                System.out.print(" ");
+                n=n+" ";
         }
-        System.out.println();
+        System.out.println(n);
 
 
     }

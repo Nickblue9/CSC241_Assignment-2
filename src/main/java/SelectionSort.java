@@ -14,19 +14,15 @@ public class SelectionSort {
             while (fScanner.hasNext()) {
                 String line = fScanner.nextLine();
                 String num="";
-                int crawler = 0;
-                while(true){
-                    if(line.charAt(crawler)==' '){
+                for(int k=0; k<line.length(); k++) {
+                    if (line.charAt(k) == ' '){
                         list.add(Integer.parseInt(num));
-                        num="";
+                        num = "";
                     }
                     else
-                        num=num+line.charAt(crawler);
-                    crawler++;
-
-                    if(crawler==line.length())
-                        break;
+                        num=num+line.charAt(k);
                 }
+                list.add(Integer.parseInt(num));
             }
             fScanner.close();
 
@@ -44,18 +40,17 @@ public class SelectionSort {
     }
 
     private void selectionSort(int[] arr){
-        int n = arr.length;
-
-        for (int i = 0; i < n-1; i++)
+        for (int i = 0; i < arr.length - 1; i++)
         {
-            int min_idx = i;
-            for (int j = i+1; j < n; j++)
-                if (arr[j] < arr[min_idx])
-                    min_idx = j;
-
-            int temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++){
+                if (arr[j] < arr[index]){
+                    index = j;
+                }
+            }
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
         }
 
     }
